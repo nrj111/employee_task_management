@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api' });
+const apiBaseUrl = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:5000/api');
+const api = axios.create({ baseURL: apiBaseUrl });
 export const getErrorMessage = error => error.response?.data?.message || error.message || 'Something went wrong.';
 export const employeesApi = {
   list: params => api.get('/employees', { params }).then(r => r.data),
