@@ -1,0 +1,23 @@
+{
+  "name": "roots-employee-task-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "roots-workforce": "file:.."
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
